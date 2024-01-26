@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="A Ye Guessing Game" />
+    <title>Dondle: A Ye Guessing Game</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+    </style>
+  </head>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <h1 class="dondleTitle">Dondle</h1>
+    <h2 class="dondleDescription">A Ye Guessing Game</h2>
+    <p id="guessNumber">Guess 1 of 6</p>
+      
+    <form autocomplete="off">
+      <input id="edu" type="text" placeholder="Enter Song" class="center-block" />
+    </form>
+    
+    <br />
+
+    <table id="show">
+      <tr>
+        <th>Song Name</th>
+        <th>Album</th>
+        <th>Position</th>
+        <th>Features</th>
+        <th>Time</th>
+      </tr>
+    </table>
+
+    <div class="popup" id="popup">
+      <button type="button" id="close-button" onclick="closePopup()">X</button>
+      <p id="right-or-wrong">test</p>
+      <p id="correct-song">Test</p>
+      <img id="albumArt" alt="no image">
+      <br>
+      <button type="button" id="share-button" onclick="shareScore()">
+        SHARE
+      </button>
+    </div>
+
+    <script>
+      var guessNum = 1;
+      document.getElementById("edu").onkeydown = function (e) {
+        if (e.keyCode == 13) {
+          myFunction();
+        }
+      };
+      function myFunction() {
+        var userGuess, text;
+        userGuess = document.getElementById("edu").value;
+        compareGuess(userGuess);
+      }
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+      function shareScore() {
+        navigator.clipboard.writeText();
+      }
+    </script>
+    <br />
+  </body>
+</html>
+
+<!-- 
+  TO DO LIST
+
+  1. Clear textbox on enter press.
+  2. Arrows (Hint button)
+  3. Get on live website.
+  4. Accounts?
+  5. Share buttons.
+-->
