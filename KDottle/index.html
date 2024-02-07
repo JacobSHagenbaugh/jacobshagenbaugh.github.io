@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDottle | A Kendrick Lamar Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src = 
+        "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
+    </script>
+</head>
+<body>
+    <div>
+        <h1>KDottle</h1>
+        <h2>A Kendrick Lamar Guessing Game</h2>
+        <input id="userGuess" type="text" placeholder="Enter Song" onkeydown="getUserGuess(event)">
+    </div>
+    <img id="albumArt" alt="no image">
+
+    <table id="answerBoard">
+        <tr>
+            <th>Song Name</th>
+            <th>Album</th>
+            <th>Position</th>
+            <th>Features</th>
+            <th>Time</th>
+        </tr>
+    </table>
+    
+</body>
+</html>
