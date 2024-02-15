@@ -12,6 +12,7 @@ table {
 
 td{
     text-align: center;
+    color: black;
     background-color: rgb(200, 200, 200);
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -56,6 +57,7 @@ input {
     padding: 10px 0;
     font-size: 16px;
     color: black;
+    width: 50%;
 }
 
 @media screen and (max-width: 1140px) {
