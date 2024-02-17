@@ -4,6 +4,7 @@
 var guessNum = 0;
 var userGuess;
 var albumArt = "";
+var albumNum;
 
 // USE UNDERSCORE.JS TO PULL ONLY ONE ITERATION OF EACH ALBUM AND PLACE
 // THEM IN TO AN ARRAY
@@ -36,14 +37,20 @@ function getAlbumArt(x) {
   return albumArt;
 }
 
+// GET ALBUM NUMBER
+function getAlbumNumber(x) {
+  for (let i = 0; i < albumArray.length; i++) {
+    if (albumArray[i] === songlist[x].Album) {
+      albumNum = i;
+      break;
+    }
+  }
+  return albumNum;
+}
+
 // ****** TAKE CARE OF THIS BEFORE RELEASE OF FIRST ITERATION *******
 // document.getElementById("albumArt").src = getAlbumArt(correctAnswer);
 // ******************************************************************
-
-// AUTOCOMPLETE FUNCTION
-function autoComplete() {
-
-}
 
 // CHECK IF USER'S GUESS IS CORRECT
 function checkGuess() {
@@ -52,12 +59,19 @@ function checkGuess() {
       console.log("YOU GOT IT RIGHT");
       displayGuess(correctAnswer);
       guessNum++;
+      gameWin();
       break;
     } else if (userGuess.toLowerCase() === songlist[i].Song.toLowerCase()) {
-      console.log(userGuess + " is incorrect");
-      displayGuess(i);
-      guessNum++;
-      break;
+      if (guessNum < 5) {  
+        console.log(userGuess + " is incorrect");
+        displayGuess(i);
+        guessNum++;
+        break;
+      } else {
+        displayGuess(i);
+        gameLoss();
+        break;
+      }
     } 
     else {
       console.log("Invalid guess");
@@ -91,7 +105,10 @@ function displayGuess(x) {
 
   if (songlist[x].Album === songlist[correctAnswer].Album) {
     cell2.style.background = "#3db946";
-  }
+  } else if ( getAlbumNumber(x) + 1 >= getAlbumNumber(correctAnswer) && 
+              getAlbumNumber(x) - 1 <= getAlbumNumber(correctAnswer)) {
+    cell2.style.background = "#fbff83";
+  } 
 
 
   // CELL 3 (POSISTION)
@@ -135,11 +152,11 @@ function displayGuess(x) {
 }
 
 function gameWin() {
-
+  console.log("Win");
 }
 
 function gameLoss() {
-  
+  console.log("Loss");
 }
 
 function shareButton() {

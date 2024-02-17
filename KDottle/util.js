@@ -13,3 +13,8 @@ function toMinSec(time) {
         return Math.floor(time / 60) + ":0" + (time % 60);
     }
 }
+
+// AUTOCOMPLETE FUNCTION
+function autoComplete() {
+
+}
