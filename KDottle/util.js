@@ -18,3 +18,8 @@ function toMinSec(time) {
 function autoComplete() {
 
 }
+
+function closePopup() {
+    let popup = document.getElementById("endGame");
+    popup.classList.remove("open-popup");
+}

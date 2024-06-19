@@ -38,6 +38,7 @@ function getAlbumArt(x) {
 }
 
 // GET ALBUM NUMBER
+// Function is super redundant but I'm too lazy to fix this right now. 
 function getAlbumNumber(x) {
   for (let i = 0; i < albumArray.length; i++) {
     if (albumArray[i] === songlist[x].Album) {
@@ -72,7 +73,7 @@ function checkGuess() {
         gameLoss();
         break;
       }
-    } 
+    }
     else {
       console.log("Invalid guess");
     }
@@ -153,10 +154,19 @@ function displayGuess(x) {
 
 function gameWin() {
   console.log("Win");
+  document.getElementById("endResult").innerHTML = 
+    "Congrats! You got it in " + guessNum + " guesses!";
+  document.getElementById("finalSong").innerHTML = songlist[correctAnswer].Song;
+  document.getElementById("albumArt").src = getAlbumArt(correctAnswer);
+  document.getElementById("endGame").classList.add("open-popup");
 }
 
 function gameLoss() {
   console.log("Loss");
+  document.getElementById("endResult").innerHTML = 
+    "Sorry, you didn't get it today!";
+  document.getElementById("finalSong").innerHTML = songlist[correctAnswer].Song;
+  document.getElementById("albumArt").src = getAlbumArt(correctAnswer);
 }
 
 function shareButton() {

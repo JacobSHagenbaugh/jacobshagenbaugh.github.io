@@ -11,15 +11,16 @@
     <script src = 
         "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
     </script>
+    <script src="https://kit.fontawesome.com/aec732294f.js" crossorigin="anonymous"></script>
     <script src="util.js"></script>
 </head>
 <body>
     <div>
         <h1>KDottle</h1>
         <h2>A Kendrick Lamar Guessing Game</h2>
-        <form autocomplete="off">
+        <form onsubmit="return false;">
             <input id="userGuess" type="text" placeholder="Enter Song" onkeydown="getUserGuess(event)">
-        </form>       
+        </form> 
         <p id="guessNumber">Guess 1 of 6</p>
     </div>
     <!-- <img id="albumArt" alt="no image"> -->
@@ -33,6 +34,15 @@
             <th>Time</th>
         </tr>
     </table>
+
+    <div id="endGame" class="endGame">
+        <i class="fa-solid fa-xmark" onclick="closePopup()"></i>
+        <p id="endResult"></p>
+        <p id="finalSong"></p>
+        <img id="albumArt" alt="no image">
+        <br>
+        <button type="button" id="shareBtn">SHARE</button>
+    </div>
     
 </body>
 </html>
