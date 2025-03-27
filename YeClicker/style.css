@@ -1,0 +1,82 @@
+/* || SITEWIDE STYLING || */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* || KANYE BUTTON STYLING ||  */
+
+#kanye-button-div {
+    width: 30%;
+    background-image: url("img/yealbumback.jpg");
+    color: white;
+}
+
+#main-window {
+    width: 50%;
+    background-color: red;
+}
+
+#Ye {
+    padding-top: 10vh;
+    background: none;
+    border-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#Ye:active {
+    transform: translateY(10px);
+}
+
+#yeCounter {
+    font-size: 48px;
+    text-align: center;
+}
+
+.popup-image {
+    position: absolute;
+    display: none;
+    transition: opacity 0.5s ease-out; /* Fade out effect */
+    width: 50px;
+    height: auto;
+}
+
+.popup-text {
+    padding-left: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+
+/* || UPGRADE STYLING ||  */
+
+#upgrade-window {
+    width: 20%;
+    
+    background-color: green;
+}
+
+#upgrade-card {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    background-color: yellow;
+}
+
+#upgrade-card:active {
+    background-color: orange;
+}
+
+#upgrade-card p {
+    font-size: 32px;
+    text-align: center;
+}
