@@ -1,0 +1,48 @@
+.playingCard {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 250px;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.card-top {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+
+.card-top p {
+    margin: 0;
+    font-size: 74px;
+}
+
+.card-mid {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.card-mid p {
+    width: 100%;
+    margin: 0;
+    font-size: 150px;
+    text-align: center;
+}
+
+.card-btm {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+
+.card-btm p {
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    font-size: 74px;
+}

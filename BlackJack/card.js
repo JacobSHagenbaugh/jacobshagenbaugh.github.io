@@ -8,11 +8,58 @@ class Card {
     getNumber() {return this.number;}
     getSuit()   {return this.suit;}
     toString() {return "Card is " + this.getNumber() + " of " + this.getSuit()}
+
+    drawCard() {
+        const a = document.getElementById("playerCards");
+        
+        // Create div
+        var cardDiv = document.createElement("div");
+        cardDiv.classList.add("playingCard");
+        
+        // Create card top
+        const b = document.createElement("div");
+        b.classList.add("card-top");
+        const z = document.createElement("p");
+        z.innerHTML = (this.number);
+
+        // Create card mid
+        const c = document.createElement("div");
+        c.classList.add("card-mid");
+        const y = document.createElement("p");
+
+        if(this.suit == "Diamonds") {
+            cardDiv.style.color = "red";
+            y.innerHTML = ("♦");
+        } else if(this.suit == "Hearts") {
+            cardDiv.style.color = "red";
+            y.innerHTML = ("♥");
+        } else if(this.suit == "Clubs") {
+            y.innerHTML = ("♣");
+        } else {
+            y.innerHTML = ("♠");
+        }
+
+        // Create card bottom
+        const d = document.createElement("div");
+        d.classList.add("card-btm");
+        const v = document.createElement("p");
+        v.innerHTML = (this.number);
+
+        // Add all elements to the DOM.
+        a.append(cardDiv);
+        cardDiv.appendChild(b);
+        cardDiv.appendChild(c);
+        cardDiv.appendChild(d);
+        b.appendChild(z);
+        c.appendChild(y);
+        d.appendChild(v);
+
+    }
 }
 
 // Suit and Value for the cards.
 const suit = ["Diamonds", "Hearts", "Clubs", "Spades"];
-const value = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
+const value = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 
 // Create an array of cards with the above values.
 const cardArray = [];
@@ -53,13 +100,13 @@ function getCardValue(x) {
         case "10":
             value = 10;
             break;
-        case "Jack":
+        case "J":
             value = 10;
             break;
-        case "Queen":
+        case "Q":
             value = 10;
             break;
-        case "King":
+        case "K":
             value = 10;
             break;
         default:
