@@ -1,0 +1,10 @@
+button {
+    padding: 20px 40px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+button:active { 
+    transform: translateY(4px);
+}

@@ -48,3 +48,24 @@ h2 {
     width: 250px;
     height: 250px;
 }
+
+#StadiumList {
+    width: 50%;
+}
+
+#StadiumList table { 
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%; 
+    background-color: #1c1c1c;
+    border-collapse: collapse;
+}
+
+#StadiumList table th {
+    background-color: #fedd00;
+    color: #000;
+}
+
+#StadiumList table tr {
+    background-color: #1c1c1c;
+}
