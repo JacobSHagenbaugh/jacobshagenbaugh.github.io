@@ -1,5 +1,9 @@
 "use strict"
 
+///////  TASK BAR SCRIPTS ///////
+
+    //TIME AND DATE
+
 setInterval(() => {
     const currentTime = new Date().toLocaleTimeString();
     document.getElementById('time').innerText = currentTime;
@@ -10,3 +14,5 @@ const currentMonth = new Date().getMonth();
 const currentDay = new Date().getDay();
 document.getElementById("date").innerText = currentMonth + "/" +
     currentDay + "/" + currentYear;
+
+    
