@@ -34,10 +34,11 @@ body, html {
     position: absolute;
     display: flex;
     right: 10px;
+    margin-top: 5px;
 }
 
 .timedate:nth-child(2) {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 #start-menu {
@@ -48,6 +49,8 @@ body, html {
     bottom: 50px;
     border-top-left-radius: 2%;
     border-top-right-radius: 2%;
+    display: none;
+    flex-direction: row;
 }
 
 #stm-left {
@@ -57,4 +60,49 @@ body, html {
     width: 280px;
     height: 480px;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+#stm-right {
+    color: white;
+    width: 140px;
+    height: 480px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.st-menu-item {
+    height: 8%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.st-menu-item:hover {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(159, 197, 255));
+    border-radius: 1%;
+    border: 1px solid rgb(116, 148, 196);
+}
+
+.st-menu-item:last-of-type {
+    height: 5%;
+    font-size: 12px;
+}
+
+.st-menu-item:first-of-type {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.st-menu-item img {
+    height: 30px;
+    width: 30px;
+}
+
+.st-menu-item span {
+    padding-left: 10px;
 }

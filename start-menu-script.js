@@ -5,14 +5,15 @@ const startButton = document.getElementById("start-button");
 
 // Start Button Functionality
 document.addEventListener('click', (event) => {
-    if (!menu.contains(event.target) && menu.hidden == false 
+    if (!menu.contains(event.target) && menu.style.display == "flex" 
     && !startButton.contains(event.target)) {
-        menu.hidden = true;  
+        menu.style.display = "none";
+        console.log("close menu");  
     }
 });
 
 function openMenu() {
-    menu.hidden = false;
+    menu.style.display = "flex";
     console.log("openMenu() Pressed")
 }
 
